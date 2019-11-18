@@ -1,18 +1,29 @@
 class Pc:
-    #class attribute
+#class attribute
     type = 'machine'
 
-    #Constructor
+#Constructor
     def __init__(self,cpu,architecture,ram):
         self.cpu = cpu
         self.architecture = architecture
         self.ram = ram
 
-    #Instance method
+#Instance method
     def description(self):
         return self.architecture, self.cpu, self.ram
 
 
+list1 = []
 
-a = Pc(3200,64,4096)
-print(a.cpu,a.architecture,a.ram)
+
+def add_pc():
+    print("entered function")
+    cpu = input()
+    architecture = input()
+    ram = input()
+    clazz = Pc(cpu, architecture, ram)
+    list1.append(clazz)
+    return
+
+
+add_pc()
